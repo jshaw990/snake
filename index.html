@@ -4,11 +4,28 @@
         <title>Snake Game</title>
         <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="functions.js"></script>
     </head>
 
     <body>
         <h1>Snake Game</h1>
-        <button class="newGame" onClick="newGame()">New Game</button>
+        <div class="gameOptions">
+            <div class="optionText">Set Your Game Options</div>
+            <div id="height">
+                <label for="height">Game Height</label>
+                <input type="number" id="canvasHeight" name="height" min="200" max="2000" value="200"><br>
+            </div>
+            <div id="width">
+                <label for="width">Game Width</label>
+                <input type="number" id="canvasWidth" name="width" min="200" max="2000" value="400"><br>
+            </div>
+            <div id="gameSpeed">
+                <label><input type="radio" id="easy" name="speed" value="120" />Easy</label>
+                <label><input type="radio" id="medium" name="speed" value="90" checked="checked" />Medium</label>
+                <label><input type="radio" id="hard" name="speed" value="60" />Hard</label>
+            </div>
+            <button class="newGame" onClick="newGame()">Start a New Game</button>
+        </div>
         <div id="gameArea">
             <div id="scoreBox">
                 <span id="scoreLabel">Score:</span>
@@ -17,6 +34,8 @@
             </div>
             <canvas id="gameCanvas" width="300" height="300"></canvas>
         </div>
-        <script src="functions.js"></script>
+        <div class="instructions">
+            Use your arrow keys to control the snake.<br>Eat food to grow longer.
+        </div>
     </body>
 </html>

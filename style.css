@@ -1,14 +1,10 @@
 body {
     text-align: center;
-    font-size: 32px;
+    font-size: 16px;
     font-family: 'Antic Slab', serif;
 }
 
 #gameArea {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     display: inline;
     text-align: center;
 }
@@ -21,5 +17,33 @@ body {
 
 .newGame {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background-color: #0000FF;
+    padding: 5px;
+    border: 1px #0000FF solid;
+    border-radius: 25px;
+}
+
+#gameSpeed {
+    display: inline-block;
+    width: 100%;
+}
+
+.gameOptions {
+    padding: 10px;
+    margin: 20px auto;
+    width: 50%;
+    background-color: #f7f7f7;
+}
+
+.optionText {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 26px;
+    text-align: center;
+    margin: 20px auto;
 }

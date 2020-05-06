@@ -1,5 +1,6 @@
 function newGame() {
-    const GAME_SPEED = 100;
+    const gameHeight = document.getElementById("canvasHeight").value;
+    const gameWidth = document.getElementById("canvasWidth").value;
     const CANVAS_BORDER_COLOUR = 'black';
     const CANVAS_BACKGROUND_COLOUR = 'white';
     const SNAKE_COLOUR = 'lightgreen';
@@ -7,6 +8,25 @@ function newGame() {
     const FOOD_COLOUR = 'red';
     const FOOD_BORDER_COLOUR = 'darkred';
     displayScore();
+
+    // Set game speed
+    let speedValue;
+    if (document.getElementById("easy").checked) {
+        speedValue = document.getElementById("easy").value;
+    }
+    if (document.getElementById("medium").checked) {
+        speedValue = document.getElementById("medium").value;
+    }
+    if (document.getElementById("hard").checked) {
+        speedValue = document.getElementById("hard").value;
+    }
+    const GAME_SPEED = speedValue;
+
+    // Set Canvas Height
+    console.log(gameHeight, gameWidth, GAME_SPEED)
+    let gameCanva = document.getElementById("gameCanvas");
+    gameCanva.height = gameHeight;
+    gameCanva.width = gameWidth;
 
     // Display Score Board
     function displayScore() {
