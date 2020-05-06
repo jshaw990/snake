@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Antic Slab', serif;
+}
+
+#gameArea {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: inline;
+    text-align: center;
+}
+
+#scoreBox {
+    display: none;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.newGame {
+    display: block;
+    margin: 0 auto;
+}
